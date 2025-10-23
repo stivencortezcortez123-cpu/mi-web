@@ -1,0 +1,279 @@
+/* --- Importa las fuentes (SIEMPRE DEBE IR AL INICIO) --- */
+@import url('https://fonts.googleapis.com/css2?family=Rye&family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+DE+SAS:wght@100..400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+body {
+    background-image: url('rgbg.jpg');
+    background-size: cover;
+    background-position: center bottom;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-color: #000000;
+    margin: 0;
+}
+
+/* --- Estilos para la Barra de Navegación --- */
+nav {
+    text-align: center;
+    padding: 40px 0;
+}
+
+nav a {
+    font-size: 36px;
+    margin: 0 20px;
+    color: white;
+    text-decoration: none;
+    font-family: "Playwrite DE SAS", cursive;
+    font-weight: 400;
+}
+
+nav a:hover {
+    color: #FFC300;
+}
+
+/* --- Estilos para la Sección de Historia --- */
+#historia {
+    width: 80%;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 8px;
+}
+
+#historia h2 {
+    font-family: 'Rye', cursive;
+    font-size: 42px;
+    color: #FFC300;
+    text-align: center;
+    margin-top: 0;
+}
+
+#historia p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    color: #FFFFFF;
+    line-height: 1.7;
+    text-align: justify;
+}
+
+
+/* --- Estilos para la Sección de Personajes --- */
+#personajes {
+    width: 80%;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 8px;
+}
+
+#personajes h2 {
+    font-family: 'Rye', cursive;
+    font-size: 42px;
+    color: #FFC300;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 40px;
+}
+
+.character-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 50px;
+}
+
+.character-card {
+    text-align: center;
+}
+
+#personajes h3 {
+    font-family: "Pacifico", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 38px;
+    color: #FFFFFF;
+    margin-bottom: 10px;
+}
+
+#personajes p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    color: #FFFFFF;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.character-card img {
+    border-radius: 8px;
+    max-width: 100%;
+    height: auto;
+    cursor: pointer;
+}
+
+/* --- Estilos para la Sección de Mundo --- */
+#mundo {
+    width: 80%;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 8px;
+    text-align: center;
+}
+
+#mundo h2 {
+    font-family: 'Rye', cursive;
+    font-size: 42px;
+    color: #FFC300;
+    text-align: center;
+    margin-top: 0;
+}
+
+#mundo p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    color: #FFFFFF;
+    line-height: 1.7;
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+#mundo img {
+    border-radius: 8px;
+    max-width: 100%;
+    height: auto;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+/* --- Estilos para Información Adicional --- */
+#info-adicional {
+    width: 80%;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 8px;
+    text-align: center;
+}
+
+#info-adicional h2 {
+    font-family: 'Rye', cursive;
+    font-size: 42px;
+    color: #FFC300;
+    text-align: center;
+    margin-top: 0;
+}
+
+#info-adicional p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    color: #FFFFFF;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+.steam-logo-link-main {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: 20px 0;
+    transition: transform 0.3s ease;
+}
+
+.steam-logo-link-main:hover {
+    transform: scale(1.1);
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    max-width: 800px;
+    margin: 30px auto 0 auto;
+    border-radius: 8px;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+/* --- CÓDIGO PARA LA IMAGEN EN PANTALLA COMPLETA --- */
+.modal-overlay {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+}
+
+.modal-close {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    color: #f1f1ff1;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.modal-close:hover {
+    color: #ccc;
+}
+
+/* --- CÓDIGO NUEVO PARA EL BOTÓN DE SUBIR --- */
+#boton-subir {
+    display: none; /* Oculto por defecto */
+    position: fixed; /* Flotante */
+    bottom: 20px;
+    right: 20px;
+    z-index: 99; /* Debajo del modal, pero encima de todo lo demás */
+    
+    background-color: #FFC300; /* Color dorado */
+    color: black;
+    border: none;
+    border-radius: 50%; /* Círculo */
+    cursor: pointer;
+    
+    padding: 10px 18px; /* Tamaño del círculo */
+    font-size: 24px; /* Tamaño de la flecha */
+    font-weight: bold;
+    text-decoration: none;
+    
+    transition: background-color 0.3s;
+}
+
+#boton-subir:hover {
+    background-color: #ffffff; /* Se pone blanco al pasar el mouse */
+}
+
+
+/* --- CÓDIGO PARA EL PIE DE PÁGINA --- */
+footer {
+    text-align: center;
+    padding: 30px 0;
+    margin-top: 40px;
+}
+
+footer p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    color: #FFFFFF;
+    line-height: 1.6;
+    margin: 5px 0;
+}
